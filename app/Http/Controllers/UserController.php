@@ -39,7 +39,7 @@ class UserController extends Controller
         $user->vek = $age;
         $user->save();
 
-        return redirect()->back()->with('message', 'IT WORKS!');
+        return redirect()->action('UserController@showAllAction');
     }
 
     public function editUser($id, Request $request)
