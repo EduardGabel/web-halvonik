@@ -13,13 +13,13 @@ class UserController extends Controller
         return view('adduser');
     }
 
-    public function showAction($id)
+    public function showUser($id)
     {
         $user = User::find($id);
 
-        echo $user->email. '<br>';
+        echo $user->email . '<br>';
         echo $user->meno . " " . $user->priezvisko . '<br>';
-        echo $user->vek. '<br>';
+        echo $user->vek . '<br>';
         echo $user->updated_at;
     }
 
@@ -42,27 +42,35 @@ class UserController extends Controller
         return redirect()->back()->with('message', 'IT WORKS!');
     }
 
-    public function updateAction($id, Request $request)
+    public function editUser($id, Request $request)
     {
         $user = User::where("id", "=", $id)->first();
         $user->update([
-            'vek' => $request->input('age'),
             'meno' => $request->input('firstname'),
             'priezvisko' => $request->input('lastname'),
-            'email' => $request->input('Email')]);
+            'email' => $request->input('email'),
+            'heslo' => $request->input('pass'),
+            'vek' => $request->input('age')]);
 
         return redirect()->action('UserController@showAllAction');
     }
 
-    public function deleteAction($id)
+    public function deleteUser($id)
     {
-        $user = User::find($id);
-        $user->delete();
+        User::where('id', '=', $id)->delete();
+        return redirect()->action('UserController@showAllAction');
     }
 
     public function showAllAction()
     {
         $users = User::all();
-        return view("users", ['users' => $users]);
+        return view("showAllUsers", ['users' => $users]);
     }
+
+    public function edit_page($id)
+    {
+        $user = User::find($id);
+        return view("update", ['user' => $user]);
+    }
+
 }
