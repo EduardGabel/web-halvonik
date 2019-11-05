@@ -8,8 +8,6 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-
-
     public function showUser($id)
     {
         $user = User::find($id);
@@ -22,18 +20,12 @@ class UserController extends Controller
 
     public function insertUser(Request $request)
     {
-        $firstName = $request->input('firstname');
-        $lastName = $request->input('lastname');
-        $email = $request->input('email');
-        $age = $request->input('age');
-
-
         $user = new User();
-        $user->meno = $firstName;
-        $user->priezvisko = $lastName;
-        $user->heslo = '';
-        $user->email = $email;
-        $user->vek = $age;
+        $user->meno = $request->input('firstname');
+        $user->priezvisko = $request->input('lastname');
+        $user->heslo = $request->input('pass');
+        $user->email = $request->input('email');
+        $user->vek = $request->input('age');
         $user->save();
 
         return redirect()->action('UserController@showAllAction');

@@ -10,7 +10,8 @@
             <input id="inputName" type="text" name="firstname" placeholder="Meno" required>
             <input type="text" name="lastname" placeholder="Priezvisko" required>
             <input type="text" name="email" placeholder="Email" required>
-            <input type="number" name="age" placeholder="Heslo" required>
+            <input type="number" name="age" placeholder="Vek" required>
+            <input type="password" name="pass" placeholder="Heslo" required>
 
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" value="Odoslať">

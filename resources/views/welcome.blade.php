@@ -18,7 +18,7 @@
         <h2>Webová stránka pre cvičenia Laravel,<span> Eduard Gábel</span></h2>
     </div>
     <div class="welcome-body">
-        <p>Pokročivé webové technológie</p>
+        <p>Pokročilé webové technológie</p>
     </div>
 </div>
 

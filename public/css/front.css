@@ -135,7 +135,7 @@ html, body {
 }
 
 .add-user-form input {
-    width: 200px;
+    width: 250px;
     margin-bottom: 20px;
 }
 
@@ -169,7 +169,7 @@ html, body {
 .add-user-form button {
     background: white;
     border: 1px solid #000000;
-    margin-right: 124px;
+    margin-right: 175px;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
