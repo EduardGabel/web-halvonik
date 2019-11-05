@@ -19,6 +19,8 @@
     </form>
 </div>
 
+@include('includes/footer')
+
 <script>
     $('#aa li a').removeClass('active');
     $('#headAdd').addClass('active');

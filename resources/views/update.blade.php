@@ -29,5 +29,8 @@
     </form>
 </div>
 
-@include('includes/scripts')
+<script>
+    $('#aa li a').removeClass('active');
+    $('#headList').addClass('active');
+</script>
 
