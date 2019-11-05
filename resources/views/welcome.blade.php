@@ -15,7 +15,7 @@
 @include('includes/navigation')
 <div class="container">
     <div class="welcome-title">
-        <h2>Webová stránka pre cvičenia s Laravelom</h2>
+        <h2>Webová stránka pre cvičenia Laravel,<span> Eduard Gábel</span></h2>
     </div>
     <div class="welcome-body">
         <p>Pokročivé webové technológie</p>

@@ -32,6 +32,9 @@ html, body {
     margin-bottom: -2px;
 }
 
+.welcome-title h2 span{
+}
+
 .welcome-body{
     padding-top: 150px;
 }
@@ -149,17 +152,18 @@ html, body {
     padding-bottom: 5px;
     font-size: 21px;
     margin-top: 30px;
-    background: #444;
-    border: 1px solid #444;
-    color: #ffffff;
+    background: #ffffff;
+    border: 2px solid #27873d;
+    border-radius: 5px;
+    color: #000000;
 
 }
 
 .add-user-form input[type="submit"]:hover{
     text-decoration: none;
-    border: 1px solid #444;
-    background: #fff;
-    color: #000000;
+    border: 2px solid #27873d;
+    background: #27873d;
+    color: #ffffff;
 }
 
 .add-user-form button {
