@@ -1,5 +1,4 @@
-<?php
-?>
+
 
 @include('includes/header')
 @include('includes/navigation')
@@ -38,9 +37,9 @@
                         {{ $user->vek }}
                     </td>
                     <td>
-                        <a class="btn btn-warning"
+                        <a class="btn"
                            href="{{ action('UserController@edit_page',['id' => $user->id])}}">Upraviť</a>
-                        <a class="btn btn-danger"
+                        <a class="btn"
                            href="{{ action('UserController@deleteUser',['id' => $user->id])}}">Vymazať</a>
                     </td>
                 </tr>
