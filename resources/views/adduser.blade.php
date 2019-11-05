@@ -25,3 +25,8 @@
         </div>
     </form>
 </div>
+
+<script>
+    $('#aa li a').removeClass('active');
+    $('#headAdd').addClass('active');
+</script>

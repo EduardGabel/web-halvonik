@@ -7,6 +7,17 @@ html, body {
     margin: 0;
 }
 
+.nav {
+    background: #444;
+}
+
+.welcome-title{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
 .nav ul {
     list-style: none;
     background-color: #444;

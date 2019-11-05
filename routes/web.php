@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home',['as' => 'show', 'uses' => 'UserController@home_page']);
+
 Route::get('/showAllAction', ['as' => 'show', 'uses' => 'UserController@showAllAction']);
 Route::get('/show/{id}', ['as' => 'show', 'uses' => 'UserController@showUser']);
 

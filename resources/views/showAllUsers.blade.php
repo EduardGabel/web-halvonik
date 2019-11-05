@@ -49,3 +49,8 @@
         </table>
     </div>
 </div>
+
+<script>
+    $('#aa li a').removeClass('active');
+    $('#headList').addClass('active');
+</script>

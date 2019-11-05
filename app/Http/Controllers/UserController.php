@@ -8,10 +8,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    public function showUserForm()
-    {
-        return view('adduser');
-    }
+
 
     public function showUser($id)
     {
@@ -67,10 +64,22 @@ class UserController extends Controller
         return view("showAllUsers", ['users' => $users]);
     }
 
+    public function showUserForm()
+    {
+        return view('adduser');
+    }
+
     public function edit_page($id)
     {
         $user = User::find($id);
         return view("update", ['user' => $user]);
     }
+
+    public function home_page()
+    {
+        return view("welcome");
+    }
+
+
 
 }
