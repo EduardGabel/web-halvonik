@@ -5,17 +5,60 @@ html, body {
     font-weight: 100;
     height: 100vh;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*------------------Title---------------------*/
+.welcome-title{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 80px;
+}
+
+.welcome-title h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.welcome-title h2::after{
+    content: 's Mgr. Halvoníkom';
+    font-size: 15px;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -2px;
+}
+
+.welcome-body{
+    padding-top: 150px;
+}
+
+.welcome-body p {
+    font-size: 22px;
+    opacity: 0.6;
+}
+
+/*.welcome-body p::before{*/
+/*    content: '';*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    background-color: #bbb;*/
+/*    border-radius: 50%;*/
+/*    display: inline-block;*/
+/*    margin-right: 10px;*/
+/*    padding-bottom: 5px;*/
+/*}*/
+
+/*------------------Navigation---------------------*/
+#navigation > div ul li a:hover {
+    text-decoration: none;
 }
 
 .nav {
     background: #444;
-}
-
-.welcome-title{
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
 }
 
 .nav ul {
@@ -56,26 +99,19 @@ html, body {
     cursor: default;
 }
 
-#showUsersTable{
+/*------------------User table---------------------*/
+#showUserTable{
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+
+.container-show-user-table{
     margin-top: 50px;
     border: 1px solid #ccc;
 }
 
-@media screen and (min-width: 600px) {
-    .nav li {
-        width: 120px;
-        border-bottom: none;
-        height: 50px;
-        line-height: 50px;
-        font-size: 1.4em;
-    }
-    .nav li {
-        display: inline-block;
-        margin-right: -4px;
-    }
-
-}
-#showUsersTable > div > h3{
+.container-show-user-table > div > h3{
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -98,4 +134,29 @@ html, body {
 .add-user-form input {
     width: 200px;
     margin-bottom: 20px;
+}
+
+.show-user-table-head tr th:last-child{
+    text-align: center;
+}
+
+.show-user-table-body tr td:last-child{
+    text-align: center;
+}
+
+/*------------MEDIA-------------------------------------*/
+
+@media screen and (min-width: 600px) {
+    .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
+    .nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
+
 }

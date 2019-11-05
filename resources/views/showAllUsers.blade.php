@@ -5,21 +5,21 @@
 @include('includes/navigation')
 
 
-<div class="container" id="showUsersTable">
+<div class="container container-show-user-table">
     <div class="row">
         <h3>Zoznam členov</h3>
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Meno</th>
-                <th scope="col">Priezvisko</th>
-                <th scope="col">Email</th>
-                <th scope="col">Vek</th>
-                <th scope="col" style="text-align: center">Možnosti</th>
-            </tr>
+        <table class="table table-striped" id="showUserTable">
+            <thead class="show-user-table-head">
+                <tr >
+                    <th>ID</th>
+                    <th>Meno</th>
+                    <th>Priezvisko</th>
+                    <th>Email</th>
+                    <th>Vek</th>
+                    <th>Možnosti</th>
+                </tr>
             </thead>
-            <tbody>
+            <tbody class="show-user-table-body">
             @foreach($users as $user)
                 <tr>
                     <td>
@@ -37,7 +37,7 @@
                     <td>
                         {{ $user->vek }}
                     </td>
-                    <td style="text-align: center">
+                    <td>
                         <a class="btn btn-warning"
                            href="{{ action('UserController@edit_page',['id' => $user->id])}}">Upraviť</a>
                         <a class="btn btn-danger"
@@ -50,7 +50,10 @@
     </div>
 </div>
 
+@include('includes/footer')
+
 <script>
     $('#aa li a').removeClass('active');
     $('#headList').addClass('active');
 </script>
+
