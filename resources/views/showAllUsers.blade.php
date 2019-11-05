@@ -7,7 +7,7 @@
 
 <div class="container" id="showUsersTable">
     <div class="row">
-
+        <h3>Zoznam členov</h3>
         <table class="table table-striped">
             <thead>
             <tr>

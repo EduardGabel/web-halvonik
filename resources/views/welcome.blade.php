@@ -18,7 +18,7 @@
 
     <div>
         <div class="container welcome-title">
-            <h2>Webová stránka Eduard Gábel</h2>
+            <h2>Webová stránka pre cvičenia s laravelom</h2>
         </div>
     </div>
 

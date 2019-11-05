@@ -75,3 +75,27 @@ html, body {
     }
 
 }
+#showUsersTable > div > h3{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-user-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.add-user-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.add-user-form input {
+    width: 200px;
+    margin-bottom: 20px;
+}
