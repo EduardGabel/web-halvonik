@@ -22,7 +22,7 @@
             <tbody>
             @foreach($users as $user)
                 <tr>
-                    <td scope="row">
+                    <td>
                         {{$user->id}}
                     </td>
                     <td>
